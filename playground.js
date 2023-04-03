@@ -61,3 +61,19 @@ Modify the program to print "FizzBuzz" for numbers that are divisible by both 3 
 // 2. 
 
 
+let x = 8
+if(x < 3) {
+    return "";
+}
+let tree = "";
+for(let i = 1; i <= x; i++) {
+    for(let j = 1; j <= x + x - 1; j++) {
+        if(j <= x - i || j >= x + i) {
+            tree += " ";
+        } else {
+            tree += "*";
+        }
+    }
+    tree += "\n";
+}
+console.log(tree);
