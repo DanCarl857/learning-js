@@ -126,6 +126,39 @@ prompt("Enter passcode: ")
 
 
 
+console.log(Math.PI)
+
+
+// Conditional Execution
+if (condition) {
+    // statements
+}
+
+Number.isNaN(5) // false
+!Number.isNaN(6) // true
+
+let numb1 = NaN
+if (!Number.isNaN(numb1)) {
+    console.log("Your number is the square root of ", numb1 * numb1)
+}
+
+if (Number.isInteger(numb1)) {
+    console.log('....')
+} else {
+    console.log("The number you entered is not an interger")
+}
+
+
+
+let numb2 = 5
+
+if (numb2 < 10) {
+    console.log('small')
+} else if (numb2 < 100) {
+    console.log("medium")
+} else {
+    console.log('large')
+}
 
 
 
@@ -137,7 +170,17 @@ prompt("Enter passcode: ")
 
 
 
-let ten = 10
+
+
+
+
+
+
+
+
+
+
+
 
 
 
