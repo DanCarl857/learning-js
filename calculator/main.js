@@ -149,7 +149,6 @@ if (Number.isInteger(numb1)) {
 }
 
 
-
 let numb2 = 5
 
 if (numb2 < 10) {
@@ -163,10 +162,35 @@ if (numb2 < 10) {
 
 
 
+if (condition) {
+
+}
+
+
+while(false) {
+    console.log("Hello")
+}
+
+do {
+    console.log("Hello")
+} while(condition)
 
 
 
 
+let value
+let index
+
+while (index < value) {
+    // statements
+    index + 1
+}
+
+
+
+for (index; index < value; index + 1) {
+    // statements
+}
 
 
 
