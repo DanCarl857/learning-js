@@ -264,20 +264,109 @@ console.log(isPalindrome("madam"))
 
 
 // Write a function to calculate the factorial of a number
-const factorial = (x) => {
-    // ....
-}
+// const factorial = (x) => {
+//     // ....
+// }
 
-let b = factorial(5)
-console.log(b)
+// let b = factorial(5)
+// console.log(b)
 
 
 
 // Write a function to calculate the area of a rectangle given the length and width
+const areaRect = (length, width) => length * width
+
 // Write a function to calculate the perimeter of a circle given the radius( hint: Math.PI)
+const circlePerimeter = (radius) => 2 * Math.PI * radius
+
 // Write a function to reverse a number
+const reverseNumber = num => {
+    let strNum = String(num)
+    return strNum.split('').reverse().join('')
+}
+
+const reverseNumber1 = num => {
+    let rev = 0
+    while (num != 0) {
+        let lastDigit = num % 10
+        rev = rev * 10 + lastDigit
+        num = Math.floor(num/10)
+    }
+    return rev
+}
+console.log(reverseNumber1(123456))
 // Write a function to count the number of vowels in a string
+const numberOfVowels = (phrase) => {
+    let charArr = phrase.toLowerCase().split('')
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    let vowelCount = 0
+    for (let index = 0; index < charArr.length; index++) {
+        if (vowels.includes(charArr[index])) vowelCount++
+    }
+    return vowelCount
+}
+console.log(numberOfVowels('I am a boy'))
+
+const nVowels = (phrase) => {
+    let charArr = phrase.toLowerCase().split('')
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    let vowelCount = charArr.reduce((acc, currentValue) => {
+        if (vowels.includes(currentValue)) acc++
+        return acc
+    }, 0)
+    return vowelCount
+}
+console.log(nVowels('I am a boy'))
+
+
 // Write a function to check if a number is prime
+const isPrime = (num) => {
+    if (num <= 1) return false
+    for (let i = 2; i < Math.floor(Math.sqrt(num)); i++) {
+        if (num % i == 0) return false
+    }
+    return true
+}
+
+const factorial = (num) => {
+    if (num == 1) return 1
+    return num * factorial(num-1)
+}
+
+// 10! = 10 * 9!...1!
+
+// factorial(10)
+//     factorial(9)
+//         factorial(8)
+//             factorial(7)
+//                 ...
+//                 factorial(1)
+
+// 0 1 1 2 3 5 8 13 21 34 55 89 144
+// Write a function to print the first 10 fibonacci numbers
+const fib = (num) => {
+    if (num < 2) {
+        return num
+    }
+    return fib(num-1) + fib(num-2)
+}
+
+const printFib = (num) => {
+    for (let i = 0; i < 10; i++) {
+        let ans = fib(i)
+        console.log(ans)
+    }
+}
+printFib(10)
+// Write a function to find the sum of natural numbers upto a given number(use recursion)
+
+
+
+
+
+
+
+
 
 
 
