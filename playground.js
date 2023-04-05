@@ -10,7 +10,6 @@
 #########
 ##########
 */
-
 // 1. going through 10 iterations
 // 2. for each iteration we are printing index + 1
 // 3. after writing # signs, print a newline after printing the # signs
@@ -319,6 +318,7 @@ const nVowels = (phrase) => {
 console.log(nVowels('I am a boy'))
 
 
+
 // Write a function to check if a number is prime
 const isPrime = (num) => {
     if (num <= 1) return false
@@ -358,7 +358,200 @@ const printFib = (num) => {
     }
 }
 printFib(10)
+
+
 // Write a function to find the sum of natural numbers upto a given number(use recursion)
+
+
+
+
+// Immutability
+/*
+string
+number
+boolean
+null
+undefined
+symbol
+bigint
+
+primitive types and they immutable
+let x = 3.14
+*/
+
+// Objects
+// created using curly braces 
+let obj = {}
+
+
+// an object is an entity with properties and type
+// let obj1 = {
+//     property: value,
+//     property1: value,
+//     proptery2: value
+// }
+
+let mercedes = {
+    color: "red",
+    wheels: 4,
+    engine: {
+        cylinders: 4,
+        sizes: 4.4
+    }
+}
+
+console.log(mercedes.color)
+console.log(mercedes.engine.cylinders)
+console.log(mercedes.engine)
+console.log(typeof mercedes)
+console.log(typeof isPalindrome)
+
+
+function Car (make, model, year, color) {
+    this.make = make
+    this.model = model
+    this.year = year
+    this.color = color
+}
+const myCar = new Car("Eagle", "Talon TS1", 1993, "black")
+const myCar1 = new Car("Benz", "C100", 2000, "grey")
+const myCar3 = new Car("Benz", "C100", 2000, "grey")
+console.log(myCar.make)
+console.log(myCar.model)
+console.log(myCar.year)
+
+myCar3.color = "red"
+console.log(myCar1)
+console.log(myCar3)
+
+
+for(const i in myCar) {
+    console.log(i)
+}
+
+delete myCar1.color
+console.log(myCar1)
+
+Car.prototype.age = "20"
+console.log(myCar.age)
+console.log(myCar3.age)
+console.log(myCar1.age)
+
+Math.sqrt()
+
+const testObj = {
+    myMethod: (a, b) => {
+        return a + b
+    }
+}
+console.log(testObj.myMethod(5, 6))
+
+const CustomMath = {
+    min: (arr) => {
+        let minimum = Number.MAX_SAFE_INTEGER
+        for(let i = 0; i < arr.length; i++) {
+            if (arr[i] < minimum) minimum = arr[i]
+        }
+        return minimum
+    }
+}
+
+console.log(CustomMath.min([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+console.log(Math.min(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+
+let newArr = []
+
+const person = {}
+person.firstName = "Jack"
+person.lastName = "Ryan"
+person.age = 50
+
+person.name = function() {
+    return this.firstName + " " + this.lastName
+}
+console.log(typeof person.name)
+console.log(person.name())
+
+console.log(Object.values(person))
+console.log(Object.keys(person))
+
+
+let ab = 5
+let z = ab
+z = 6
+// ab = 7
+console.log(ab)
+console.log(z)
+
+
+const x1 = person
+x1.firstName = "George"
+console.log(x1)
+console.log(person)
+console.log(person["firstName"])
+
+let objOfObj = {
+    name: "Jack",
+    profession: {
+        title: "Engineer",
+        years: 2
+    }
+}
+
+// objOfObj["profession"]["title"]
+// objOfObj.profession.title
+
+// Accessing Object properties
+// let obj = {}
+// obj.property
+// obj["property"]
+
+
+for (let index in person) {
+    console.log(person[`${index}`])
+}
+
+// JSON
+// Javascript Object Notation
+let personString = JSON.stringify(person)
+console.log(personString)
+console.log(Object.values(personString))
+console.log(typeof personString)
+
+let personObj = JSON.parse(personString)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
