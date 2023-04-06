@@ -490,6 +490,9 @@ console.log(x1)
 console.log(person)
 console.log(person["firstName"])
 
+person.profession = "engineer"
+
+
 let objOfObj = {
     name: "Jack",
     profession: {
@@ -515,10 +518,174 @@ for (let index in person) {
 // Javascript Object Notation
 let personString = JSON.stringify(person)
 console.log(personString)
-console.log(Object.values(personString))
+// console.log(Object.values(personString))
 console.log(typeof personString)
 
 let personObj = JSON.parse(personString)
+
+
+// Javascript Sets
+// A set is a collection of unique values
+
+// Each value can only occur one in a Set
+// a Set can hold any value of any data type
+let s = new Set()
+let t = new Set([1, 12, 1, 2, 2, 3])
+console.log(t)
+
+// add() -> adds a new element to a set
+// delete() -> deletes an element from a set
+// has() -> returns true if a value exists
+// clear() -> Removes all elements from a set
+// forEach() -> Invokes a callback for each element
+// values() -> returns an iterator with all the values in a set
+// keys() -> same as values()
+// entries() -> Returns an Iterator with the (value, value) pairs from a set
+// size -> returns the number of elements in a set
+
+// Read up on Maps
+
+let object1 = { value: 10 }
+let object2 = object1
+let object3 = { value: 10 }
+
+console.log(object1 == object2) // true
+console.log(object1 == object3) // false
+
+// String Methods(some)
+console.log("coconuts".slice(4, 7)) // nut
+console.log("coconut".indexOf('u')) // 5
+console.log("coconut".indexOf('p')) // -1
+console.log("coconut".indexOf('o')) // 1
+console.log("coconut".indexOf('o', 1)) // 3
+console.log("    okay".trim()) // okay
+
+
+// Rest parameters
+// Math.min(1, 2, 3) -> 1
+// Math.min(1) -> 1
+// Math.min(1, 2, 3, 4, 5) -> 1
+
+function max(...numbers) {
+    let result = -Infinity
+    for (let number of numbers) {
+        if (number > result) result = number
+    }
+    return result
+}
+console.log(max(1))
+console.log(max(1, 2))
+console.log(max(1, 2, 3, 4, 5))
+
+let xp = [5, 1, 7]
+console.log(max(...xp))
+
+// ... -> spread operator
+let wordsAgain = ["never", "fully"]
+console.log(["will", ...wordsAgain, "understand"])
+
+
+/*
+Write a range function that takes 2 arguments start and end and returns and array
+containing all the numbers from start up to (and including) end.
+
+Next write a fum function that takes an array of numbers and returns the sum of these numbers
+
+Modify your range function to take an option third argument that indicates the "step" value 
+used when building the array.
+If no step is given, the elements go up by increments of one.
+So 
+range(1, 10, 2) -> [1, 3, 5, 7, 9]
+range(1, 10) -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Write a function deepEqual that takes two values and returns true only if they are the same or are objects
+with the same properties, where the values of the properties are equal when compared with a recursive call to 
+deepEqual.
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
