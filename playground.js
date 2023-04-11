@@ -645,9 +645,208 @@ console.log(fum([2,3]))
 //     { b: { age: 24} }
 // )
 
-let testA = 3
-console.log(testA++)
-console.log(testA)
+// let testA = 3
+// console.log(testA++)
+// console.log(testA)
+
+// Closures
+/*
+A closure is a function that references variables in the outer scope from its inner scope.
+The closure preserves the outer scope inside its inner scope
+*/
+
+// let example_name = 'John'
+
+// function greeting() {
+//     let message = 'Hi'
+
+//     function sayHi() {
+//         console.log(message)
+//     }
+//     // console.log(message + ' ' + example_name)
+//     sayHi()
+// }
+
+// greeting()
+
+
+
+// function greeting() {
+//     let message = 'Hi'
+
+//     function sayHi() {
+//         console.log(message)
+//     }
+
+//     return sayHi
+// }
+// let hi = greeting()
+// hi()
+
+// function greeting (message) {
+//     return function (name) {
+//         return message + " " + name
+//     }
+// }
+// let sayHi = greeting('Hi')
+// let sayHello = greeting('Hello')
+
+// console.log(sayHi('John'))
+// console.log(sayHello('John'))
+
+// Javascript closures in a loop
+// for (var index = 1; index <= 3; index++) {
+//     setTimeout(function () {
+//         console.log('after ' + index + ' second(s"): ' + index);
+//     }, index * 1000)
+// }
+
+// IIFE - Immediately Invoked Function Expression
+// for (var index = 1; index <= 3; index++) {
+//     (function(index) {
+//         setTimeout(function () {
+//             console.log('after ' + index + ' second(s): ' + index);
+//         }, index * 1000)
+//     })(index)
+// }
+
+// Using let keyword in ES6
+for (let index = 1; index <= 3; index++) {
+    setTimeout(function() {
+        console.log(('after ' + index + ' second(s):' + index))
+    }, index * 1000)
+}
+
+// Higher Order Functions
+// A function that operates on other functions
+// function greaterThan(n) {
+//     return m => m > n
+// }
+
+// Modules
+/*
+A module is a piece of program that specifies which other pieces it relies on and which
+functionality it provides for other modules to use
+*/
+
+import ordinal from "ordinal"
+import { days, months} from "date-names"
+
+export function formatDate(date, format)
+
+// compilers/interpreters
+// bundlers
+// minifiers
+// transpilers
+
+
+// THE WEB
+// www.google.com
+// URL
+// https://google.com?search=what-is--text
+//  -> protocol: http
+//  -> google.com
+//  -> search=what-is-text
+// Document Object Model/DOM
+// document => entire document
+// documentElement => html
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
