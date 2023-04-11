@@ -603,6 +603,52 @@ with the same properties, where the values of the properties are equal when comp
 deepEqual.
 
 */
+const range = (start, end, step = 1) => {
+    let arr = []
+    for(let i = start; i <= end; i += step) {
+        arr.push(i)
+    }
+    return arr
+}
+console.log(range(1, 10))
+
+const fum = (arr) => {
+    let sum = 0
+    for (n of arr) {
+        sum += n
+    }
+    return sum
+}
+
+console.log(fum([1, 2, 3, 4]))
+console.log(fum([2,3]))
+
+// const deepEqual = (val1, val2) => {
+//     if (typeof val1 !== 'object' && typeof val2 !== 'object') {
+//         return val1 == val2
+//     }
+//     let keys1 = Object.keys(val1)
+//     let keys2 = Object.keys(val2)
+
+//     if (keys1.length !== keys2.length) return false
+
+//     for (let i = 0; i < keys1.length; i++) {
+//         for (let j = 0; j < keys1.length; j++) {
+//             if ()
+//         }
+//     }
+
+// }
+
+// deepEqual(
+//     { a: { name: "Jack"}},
+//     { b: { age: 24} }
+// )
+
+let testA = 3
+console.log(testA++)
+console.log(testA)
+
 
 
 
