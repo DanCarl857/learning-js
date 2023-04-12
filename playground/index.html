@@ -18,7 +18,14 @@
 
         <h4>Slide Show</h4>
         <img id="image1" src="img/cat.png" />
-        <button onclick="slideshow()">Start</butotn>
+        <button onclick="slideshow()">Start</button>
+
+
+        <div>
+            <input type="text" placeholder="Enter username" id="username" />
+            <input type="password" placeholder="Enter password" id="password" />
+            <button onclick="login()">Login</button>
+        </div>
     </body>
     <!-- <script src="./main.js"></script> -->
     <script type="text/javascript">
@@ -26,6 +33,23 @@
 
         let paragraphs = document.getElementsByTagName("p")
         document.insertBefore(paragraphs[2], paragraphs[0])
+
+        function login() {
+            let username = document.getElementById('username').value
+            let password = document.getElementById('password').value
+            alert(username, password)
+        }
+
+        function isValidUsername (username) {
+            // return username.length < 8
+            if (username.length < 8) {
+                // show error
+            }
+        }
+
+        function hasNumbersAndLetters (str) {
+            return /^[A-Za-z0-9]*$/.test(str)
+        }
 
         function replaceImages() {
             let images = document.getElementsByTagName("img")
