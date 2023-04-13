@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>Playground</head>
+    <style>
+        .err {
+            color: red;
+            font-weight: 700;
+            font-style: italic;
+        }
+    </style>
     <body>
         <h1>Our Playground</h1>
         <p>My ostrich Gertrude:</p>
@@ -22,9 +29,11 @@
 
 
         <div>
-            <input type="text" placeholder="Enter username" id="username" />
-            <input type="password" placeholder="Enter password" id="password" />
+            <input type="text" placeholder="Enter username" id="username" /><br />
+            <input type="password" placeholder="Enter password" id="password" /><br />
             <button onclick="login()">Login</button>
+            <p class="err" id="invalidUsernameError"></p>
+            <p class="err" id="invalidPasswordError"></p>
         </div>
     </body>
     <!-- <script src="./main.js"></script> -->
@@ -37,14 +46,34 @@
         function login() {
             let username = document.getElementById('username').value
             let password = document.getElementById('password').value
-            alert(username, password)
+            
+            if (!isValidUsername(username)) {
+                let p = document.getElementById('invalidUsernameError')
+                p.innerHTML = 'Your username is invalid'
+            }
+
+            if (isValidPassword(password)) {
+                console.log('password is invalid')
+                let p = document.getElementById('invalidPasswordError')
+                p.innerHTML = 'Your password is invalid'
+            }
         }
 
         function isValidUsername (username) {
-            // return username.length < 8
-            if (username.length < 8) {
-                // show error
-            }
+            // if (username.length < 8) {
+            //     return false
+            // }
+            // return true
+
+            return username.length > 8 ? true : false
+        }
+
+        function isValidPassword (password) {
+            // if (hasNumbersAndLetters(password)) {
+            //     return true
+            // }
+            // return false
+            return hasNumbersAndLetters(password) ? true : false
         }
 
         function hasNumbersAndLetters (str) {
